@@ -73,7 +73,7 @@ class View():
                 x = 50+30*j
                 y = 70+30*i
                 self.canvas.create_text(x+300,y+15,text=self.model.data[i][j],font=("Helvetica",15,"bold"),fill="red",tag="block") #文字盤面
-                self.canvas.create_rectangle(x,y,x+30,y+30,outline="black") #盤面
+                self.canvas.create_rectangle(x,y,x+30,y+30,outline="red") #盤面
 
     def update(self):
 
