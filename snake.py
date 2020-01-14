@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 import random
 import time
 
-SIZE = 
+SIZE = 40
 
 class Square:
     def __init__(self, x, y):
