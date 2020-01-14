@@ -4,8 +4,8 @@ import math
 
 class Model():
 
-    width = 7 #横軸の盤面の数
-    height = 15 #縦軸の盤面の数
+    width = 4 #横軸の盤面の数
+    height = 10 #縦軸の盤面の数
 
     def __init__(self):
         self.data = [[0]*Model.width for i in range(Model.height)] #0の要素を入れた2次元配列の作成
