@@ -85,7 +85,7 @@ class View():
                 y = 70+30*i
                 self.canvas.create_text(x+300,y+15,text=self.model.data[i][j],font=("Helvetica",15,"bold"),fill="",tag="block")
                 if self.model.data[i][j] == 1 or self.model.data[i][j] == 2: #dataが1か2のものを表示
-                    self.canvas.create_rectangle(x,y,x+30,y+30,fill="red",outline="yellow",tag="block")
+                    self.canvas.create_rectangle(x,y,x+30,y+30,fill="red",outline="blue",tag="block")
 
 
 class Controller():
