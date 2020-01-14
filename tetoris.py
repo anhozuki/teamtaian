@@ -65,15 +65,15 @@ class View():
         self.model = model
         self.controller = controller
 
-        self.canvas = tk.Canvas(self.master,width=600,height=600,bg="black") #キャンバスの作成
+        self.canvas = tk.Canvas(self.master,width=600,height=600,bg="white") #キャンバスの作成
         self.canvas.pack()
 
         for i in range(Model.height): #盤面を表示
             for j in range(Model.width):
                 x = 50+30*j
                 y = 70+30*i
-                self.canvas.create_text(x+300,y+15,text=self.model.data[i][j],font=("Helvetica",15,"bold"),fill="white",tag="block") #文字盤面
-                self.canvas.create_rectangle(x,y,x+30,y+30,outline="white") #盤面
+                self.canvas.create_text(x+300,y+15,text=self.model.data[i][j],font=("Helvetica",15,"bold"),fill="red",tag="block") #文字盤面
+                self.canvas.create_rectangle(x,y,x+30,y+30,outline="black") #盤面
 
     def update(self):
 
@@ -85,7 +85,7 @@ class View():
                 y = 70+30*i
                 self.canvas.create_text(x+300,y+15,text=self.model.data[i][j],font=("Helvetica",15,"bold"),fill="white",tag="block")
                 if self.model.data[i][j] == 1 or self.model.data[i][j] == 2: #dataが1か2のものを表示
-                    self.canvas.create_rectangle(x,y,x+30,y+30,fill="red",outline="white",tag="block")
+                    self.canvas.create_rectangle(x,y,x+30,y+30,fill="red",outline="yellow",tag="block")
 
 
 class Controller():
